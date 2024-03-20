@@ -1,4 +1,6 @@
-### Hi there 👋
+### Keep on keeping on...
+
+The journey of 1 million lines of code begins with a single... 🤔🤔🤔
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
