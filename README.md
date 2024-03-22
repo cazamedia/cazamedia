@@ -1,6 +1,6 @@
 ### Keep on keeping on...
 
-Adding new features...
+Using Python for Extensions/Plugins within a Python-based application is ***Next Level***!
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
