@@ -1,6 +1,7 @@
 ### Keep on keeping on...
 
 Using Python for Extensions/Plugins within a Python-based application is ***Next Level***!
+Add Pandas for enhanced operation of ML/AI workloads.
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
