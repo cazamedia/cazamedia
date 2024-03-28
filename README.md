@@ -5,6 +5,7 @@
 + Proof-of-Concept work can be very slow going at times.  Stay the course!
 + Before embarking on the journey for a MVP (Minimum Viable Product), first target the MVF (Minimum Viable Feature) to determine if there's even a need.  Let that be your guide.
 + Make sure all stakeholders are onside; otherwise, you could simply be spinning your wheels and wasting time.
++ Your network is your net worth!  Be sure to expand it to help maintain gainful employment.
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
