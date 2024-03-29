@@ -5,6 +5,7 @@
 + Proof-of-Concept work can be very slow going at times.  Stay the course!
 + Before embarking on the journey for a MVP (Minimum Viable Product), first target the MVF (Minimum Viable Feature) to determine if there's even a need.  Let that be your guide.
 + When returning multiple values in Python, use either a NamedTuple or proper class instance to be Pythonic.
++ Use Tkinter & CustomTkinter in order to build Python-based GUIs that run on Windows, Linux, and Macs.
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
