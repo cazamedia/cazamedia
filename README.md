@@ -2,11 +2,8 @@
 
 + Using Python for Extensions/Plugins within a Python-based application is ***Next Level***!
 + Despite what Leetcode would have you believe, premature optimization is to be avoided.  It's a rabbit hole that oft times consumes resources with little, if any, meaningful gains.
-+ Proof-of-Concept work can be very slow going at times.  Stay the course!
-+ Before embarking on the journey for a MVP (Minimum Viable Product), first target the MVF (Minimum Viable Feature) to determine if there's even a need.  Let that be your guide.
-+ When returning multiple values in Python, use either a NamedTuple or proper class instance to be Pythonic.
-+ Use Tkinter & CustomTkinter in order to build Python-based GUIs that run on Windows, Linux, and Macs.
 + Solve Leetcode problems, one per day, FTW.
++ Princeton University offers a free, online, two-part Algorithms course recommended to help improve your DSA-foo.  Learn them if you want to pass Coding Interviews!
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
