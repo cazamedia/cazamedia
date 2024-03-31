@@ -4,6 +4,7 @@
 + Despite what Leetcode would have you believe, premature optimization is to be avoided.  It's a rabbit hole that oft times consumes resources with little, if any, meaningful gains.
 + Solve Leetcode problems, one per day, FTW.
 + Princeton University offers a free, online, two-part Algorithms course recommended to help improve your DSA-foo.  Learn them if you want to pass Coding Interviews!
++ Alas, getting past the Gatekeepers is oft times no easy task.  Having a Portfolio to showcase your work can be of immense utility in this regard.
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
