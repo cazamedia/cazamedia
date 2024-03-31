@@ -5,6 +5,7 @@
 + Solve Leetcode problems, one per day, FTW.
 + Princeton University offers a free, online, two-part Algorithms course recommended to help improve your DSA-foo.  Learn them if you want to pass Coding Interviews!
 + I cannot say that I much care for the license agreement of MongoDB very much.  They seemingly really, really want you to utilize their MongoDB Atlas service.
++ The updated license terms in Redis are also questionable methinks 🤔. 
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
