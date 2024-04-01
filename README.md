@@ -5,6 +5,8 @@
 + I cannot say that I much care for the license agreement of MongoDB very much.  They seemingly really, really want you to utilize their MongoDB Atlas service.
 + The updated license terms in Redis are also questionable methinks 🤔.
 + Nothing wrong with using SQLite, but if you need a more powerful database, I highly recommend PostgreSQL.  I've used it for several years: it's flexible, performant, and very reliable.
+  + One thing for sure about PostgreSQL: due to the community and a plethora of interested parties, it is virtual impossible for the license agreement to change hence no closed-source, no for-pay/subscription bs, and no vendor lock-in.
+
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
