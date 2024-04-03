@@ -7,6 +7,7 @@
 + Nothing wrong with using SQLite, but if you need a more powerful database, I highly recommend PostgreSQL.  I've used it for several years: it's flexible, performant, and very reliable.
   + One thing for sure about PostgreSQL: due to the community and a plethora of interested parties, it is virtually impossible for the license agreement to change hence no closed-source, no for-pay/subscription bs, and no vendor lock-in.
     + Caveat emptor: lock-in can, in point of fact, be self-inflicted.  I should know: I've done it 😄 with PostgreSQL myself!  But it was intentional and I knew full-well what I was doing.  Try it yourself: you'll love it 😄😄😄!
+  + Keep an eye on [OrioleDB](https://github.com/orioledb/orioledb), a new storage engine for PostgreSQL. I anticipate it's going to be game-changing 😄! 
 + Contrary to popular belief, you do NOT have to design and develop a software system using Microservices from the beginning.  That's called premature optimization and is frowned upon.  And, quite honestly, in a lot of cases, it's just overkill.
 
 
