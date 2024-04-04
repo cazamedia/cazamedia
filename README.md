@@ -2,15 +2,7 @@
 
 + Using Python for Extensions/Plugins within a Python-based application is ***Next Level***!
 + Princeton University offers a free, online, two-part Algorithms course recommended to help improve your DSA-foo.  Learn them if you want to pass Coding Interviews!
-+ Choosing between a SQL and NoSQL backend for persistant storage can be tricky.  But, for a majority of cases, SQL usually works quite well.
-  + Before Microsoft purchased them, Skype was able to scale their system using PostgreSQL, admittedly with some specialized code, to an enormous scale. 
-+ Nothing wrong with using SQLite, but if you need a more powerful database, I highly recommend PostgreSQL.  I've used it for several years: it's flexible, performant, and very reliable.
-  + One thing for sure about PostgreSQL: due to the community and a plethora of interested parties, it is virtually impossible for the license agreement to change hence no closed-source, no for-pay/subscription bs, and no vendor lock-in.
-    + Caveat emptor: lock-in can, in point of fact, be self-inflicted.  I should know: I've done it 😄 with PostgreSQL myself!  But it was intentional and I knew full-well what I was doing.  Try it yourself: you'll love it 😄😄😄!
-  + Keep an eye on [OrioleDB](https://github.com/orioledb/orioledb), a new storage engine for PostgreSQL. I anticipate it's going to be game-changing 😄! 
-+ Contrary to popular belief, you do NOT have to design and develop a software system using Microservices from the beginning.  That's called premature optimization and is frowned upon.  And, quite honestly, in a lot of cases, it's just overkill.
-
-
++ In general, a complete rewrite of a software system is generally a bad idea.  Having attempted this numerous times in my early developer days in a feeble attempt to make something better, truer words have not been writ.
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
