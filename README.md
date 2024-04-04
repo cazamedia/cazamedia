@@ -3,7 +3,9 @@
 + Using Python for Extensions/Plugins within a Python-based application is ***Next Level***!
 + Princeton University offers a free, online, two-part Algorithms course recommended to help improve your DSA-foo.  Learn them if you want to pass Coding Interviews!
 + In general, a complete rewrite of a software system is generally a bad idea.  Having attempted this numerous times in my early developer days in a feeble attempt to make something better, truer words have not been writ.
-  + Still, times changes and so do technologies.  And for the latter, at a blistering speed.  This may prompt a review of the above which is more of a guideline rather than a rule 🤔😄.  
+  + Still, times changes and so do technologies.  And for the latter, at a blistering speed.  This may prompt a review of the above which is more of a guideline rather than a rule 🤔😄.
+  + And if your system has become too brittle, too tightly-coupled, and so inundated with technical debt that there's simply no way to move forward, well then a rewrite is long overdue!
+    + Caveat emptor: unless the system is no longer viable and is essentially on life-support. 
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
