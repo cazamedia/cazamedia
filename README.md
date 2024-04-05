@@ -1,7 +1,6 @@
 ### Keep on keeping on...
 
-+ Using Python for Extensions/Plugins within a Python-based application is ***Next Level***!
-+ Princeton University offers a free, online, two-part Algorithms course recommended to help improve your DSA-foo.  Learn them if you want to pass Coding Interviews!
++ PWAs - Progressive Web Applications - are an interesting way of delivering applications to end users.  Tis rather unfortunate that the *Firefox* and *Safari* web browsers do not support them and that Apple has intentionally hamstrung them to protect their *Walled Garden*.
 + If you use Redis, you probably want to switch to [Valkey](https://github.com/valkey-io/valkey), a fork of Redis 7.2.4 and the last open source version prior to the license change by Redis Inc. New new project is headed by the Linux Foundation.
   + Typically, when the Linux Foundation takes on a project, all competitors slowly disappear into the great *Bit Bucket* in the sky.
   + I anticipate Redis Inc's days are numbered as the announcement from the Linux Foundation was essentially a death knell for the company: there's no going back!
