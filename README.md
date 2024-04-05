@@ -2,6 +2,7 @@
 
 + Using Python for Extensions/Plugins within a Python-based application is ***Next Level***!
 + Princeton University offers a free, online, two-part Algorithms course recommended to help improve your DSA-foo.  Learn them if you want to pass Coding Interviews!
++ If you use Redis, you probably want to switch to [Valkey](https://github.com/valkey-io/valkey), a fork of Redis 7.2.4 and the last open source version prior to the license change by Redis Inc. and which headed by the Linux Foundation.
 + In general, a complete rewrite of a software system is generally a bad idea.  Having attempted this numerous times in my early developer days in a feeble attempt to make something better, truer words have not been writ.
   + Still, times changes and so do technologies.  And for the latter, at a blistering speed.  This may prompt a review of the above which is more of a guideline rather than a rule 🤔😄.
   + And if your system has become too brittle, too tightly-coupled, and so inundated with technical debt that there's simply no way to move forward, well then a rewrite is long overdue!
