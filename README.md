@@ -4,10 +4,8 @@
 + If you use Redis, you probably want to switch to [Valkey](https://github.com/valkey-io/valkey), a fork of Redis 7.2.4 and the last open source version prior to the license change by Redis Inc. New new project is headed by the Linux Foundation.
   + Typically, when the Linux Foundation takes on a project, all competitors slowly disappear into the great *Bit Bucket* in the sky.
   + I anticipate Redis Inc's days are numbered as the announcement from the Linux Foundation was essentially a death knell for the company: there's no going back!
-+ In general, a complete rewrite of a software system is generally a bad idea.  Having attempted this numerous times in my early developer days in a feeble attempt to make something better, truer words have not been writ.
-  + Still, times changes and so do technologies.  And for the latter, at a blistering speed.  This may prompt a review of the above which is more of a guideline rather than a rule 🤔😄.
-  + And if your system has become too brittle, too tightly-coupled, and so inundated with technical debt that there's simply no way to move forward, well then a rewrite is long overdue!
-    + Caveat emptor: unless the system is no longer viable and is essentially on life-support. 
++ *Proof-of-Concept* work can be incredibly beneficial when embarking on a new project.  Care must be taken, however, that the POC is just that - a *Proof Of Concept* - and not the final product!
+    
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
