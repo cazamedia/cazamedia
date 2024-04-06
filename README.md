@@ -4,7 +4,8 @@
 + If you use Redis, you probably want to switch to [Valkey](https://github.com/valkey-io/valkey), a fork of Redis 7.2.4 and the last open source version prior to the license change by Redis Inc. New new project is headed by the Linux Foundation.
   + Typically, when the Linux Foundation takes on a project, all competitors slowly disappear into the great *Bit Bucket* in the sky.
   + I anticipate Redis Inc's days are numbered as the announcement from the Linux Foundation was essentially a death knell for the company: there's no going back!
-+ *Proof-of-Concept* work can be incredibly beneficial when embarking on a new project.  Care must be taken, however, that the POC is just that - a *Proof Of Concept* - and not the final product!
++ *Proof-of-Concept* work can be incredibly beneficial when embarking on a new project.  Care must be taken, however, that the ***POC*** is just that - a *Proof Of Concept* - and not the final product!
+  + Oft times, management will try to force you to put a *POC* into production.  Try to avoid this at all costs - unless, of course, you got it in one.  In that case, *well done you!*😄
     
 
 <!--
