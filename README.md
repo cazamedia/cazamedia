@@ -2,6 +2,7 @@
 
 + PWAs - Progressive Web Applications - are an interesting way of delivering applications to end users.  Tis rather unfortunate that the *Firefox* and *Safari* web browsers do not support them and that Apple has intentionally hamstrung them to protect their *Walled Garden*.
   + Trying a PWA sample on my own system, I was happy to note that it worked straight away.  NOTE: My daily driver is LinuxMint and *Firefox* which, as mentioned above, does ***NOT*** support PWAs.  Consequently, I had to use Chromium.  Using Chromium, PWA installation was easy and I was able to install a PWA on my home screen without issue.
+  + Additionally, I was able to modify the PWA on the host website and automagically have my changes propagate to one installed on my desktop home screen on the next run. Good 😄!
 + *Proof-of-Concept* work can be incredibly beneficial when embarking on a new project.  Care must be taken, however, that the ***POC*** is just that - a *Proof Of Concept* - and not the final product!
   + Oft times, management will try to force you to put a *POC* into production.  Try to avoid this at all costs - unless, of course, you got it in one.  In that case, *well done you!*😄
      + If, however, you are a mere mortal like most of us, consider this: you're *POC* might be a *POS* that you'll be supporting in ***perpetuity***!  Factor that in to your thought processes.
