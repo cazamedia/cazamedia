@@ -4,6 +4,7 @@
   + Trying a PWA sample on my own system, I was happy to note that it worked straight away.  NOTE: My daily driver is LinuxMint and *Firefox* which, as mentioned above, does ***NOT*** support PWAs.  Consequently, I had to use Chromium.  Using Chromium, PWA installation was easy and I was able to install a PWA on my home screen without issue.
   + Additionally, I was able to modify the PWA on the host website and automagically have my changes propagate to the one installed on my desktop home screen on the next run. Good 😄!
   + I also tested this on my Android cellphone.  I learned that the *Brave* web browser also does not seem to like PWAs.  Chrome, however, worked fine.
+  + As expected, installing this simple PWA on iOS - in this case my iPad - proved to be a painful experience.  I did, in point of fact, get it working after installing and using Google Chrome on iPad.  But I'm not sure it's something I could expect users to be able to achieve.
 + Python offers a large selection of ways to create desktop Graphical User Interfaces: Tkinter(CustomTkinter), Kivy, PyQt, wxPython, et cetera.
   + Tkinter is based on Tcl/Tk and is a very mature offering.  However, some consider that GUIs made with it look dated and unappealing in comparison to modern web & mobile applications.
     + Tkinter is licensed under the [Tcl/Tk License](https://www.tcl.tk/software/tcltk/license.html), a BSD-style license, for the Tcl/Tk porition and the Python license for the Python porition.
