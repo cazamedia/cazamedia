@@ -11,9 +11,6 @@
   + Kivy is a newer Python cross-platform GUI framework that can be utilized to make more modern GUIs in comparision to TKinter.
     + Kivy is MIT licensed and is 100% free to use for individuals and businesses with no strings attached.
     + Kivy supports Windows, Linux, macOS, Android, and iOS. 
-+ *Proof-of-Concept* work can be incredibly beneficial when embarking on a new project.  Care must be taken, however, that the ***POC*** is just that - a *Proof Of Concept* - and not the final product!
-  + Oft times, management will try to force you to put a *POC* into production.  Try to avoid this at all costs - unless, of course, you got it in one.  In that case, *well done you!*😄
-     + If, however, you are a mere mortal like most of us, consider this: you're *POC* might be a *POS* that you'll be supporting in ***perpetuity***!  Factor that in to your thought processes.
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
