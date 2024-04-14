@@ -10,7 +10,8 @@
     + Tkinter is licensed under the [Tcl/Tk License](https://www.tcl.tk/software/tcltk/license.html), a BSD-style license, for the Tcl/Tk porition and the Python license for the Python porition.
   + Kivy is a newer Python cross-platform GUI framework that can be utilized to make more modern GUIs in comparision to TKinter.
     + Kivy is MIT licensed and is 100% free to use for individuals and businesses with no strings attached.
-    + Kivy supports Windows, Linux, macOS, Android, and iOS. 
+    + Kivy supports Windows, Linux, macOS, Android, and iOS.
++ If you have or you manage a website, consider running an automated check periodically to verify that all hyperlinks are valid.  It's not a good look when a potential customer clicks on links to information on a site and receives errors instead.
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
