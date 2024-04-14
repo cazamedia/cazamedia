@@ -12,6 +12,7 @@
     + Kivy is MIT licensed and is 100% free to use for individuals and businesses with no strings attached.
     + Kivy supports Windows, Linux, macOS, Android, and iOS.
 + If you have or you manage a website, consider running an automated check periodically to verify that all hyperlinks are valid.  It's not a good look when a potential customer clicks on links to information on a site and receives errors instead.
++ If you're using a SQLite database, you should almost always do a ***PRAGMA integrity_check*** on startup to verify that the database has not been corrupted.
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
