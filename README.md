@@ -13,6 +13,13 @@
     + Kivy supports Windows, Linux, macOS, Android, and iOS.
 + If you have or you manage a website, consider running an automated check periodically to verify that all hyperlinks are valid.  It's not a good look when a potential customer clicks on links to information on a site and receives errors instead.
 + If you're using a SQLite database, you should almost always do a ***PRAGMA integrity_check*** on startup to verify that the database has not been corrupted.
++ SQLite supports in memory databases which, optionally, may be saved and loaded from persistent storage.  (Don't forget the integrity check on load as per above!)
++ PostgreSQL, at this time, does not appear to support *memory*-only database tables.  There are various approaches to tackle this limitation but an easy one appears to be to simply use a CTE (*Common Table Expression*) with data obtained from the desired source.  For example:
+  
+      WITH query_src AS (*get some data*) SELECT *desired_results* FROM query_src;
+  
+  + The ***get some data*** source could be provided by *memcached*, *KeyDB*, *Garnet*, a web service, a daemon internally using a SQLite in memory table, et cetera. Use your imagination 😄!
+  + Note that if you need to perform multiple queries on the source data, you should use the CTE to save the data to a *Temporary Table* and then proceed with the multiple queries.  Assuming, of course, that you cannot achieve the desired results in one single gigantic CTE 😄.
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
