@@ -11,7 +11,6 @@
   + Kivy is a newer Python cross-platform GUI framework that can be utilized to make more modern GUIs in comparision to TKinter.
     + Kivy is MIT licensed and is 100% free to use for individuals and businesses with no strings attached.
     + Kivy supports Windows, Linux, macOS, Android, and iOS.
-+ If you have or you manage a website, consider running an automated check periodically to verify that all hyperlinks are valid.  It's not a good look when a potential customer clicks on links to information on a site and receives errors instead.
 + If you're using a SQLite database, you should almost always do a ***PRAGMA integrity_check*** on startup to verify that the database has not been corrupted.
 + SQLite supports in memory databases which, optionally, may be saved and loaded from persistent storage.  (Don't forget the integrity check on load as per above!)
 + PostgreSQL, at this time, does not appear to support *memory*-only database tables.  There are various approaches to tackle this limitation but an easy one appears to be to simply use a CTE (*Common Table Expression*) with data obtained from the desired source.  For example:
