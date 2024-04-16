@@ -16,6 +16,7 @@
   + Consider using a file system that utilizes *Copy-On-Write* like ZFS.
   + Enabling *Write-Ahead-Logging* will minimize the window of when database corruption can occur as it the only failure period is during a *checkpoint* operation.
     + *Write-Ahead-Logging* also boosts the speed of SQLite because data only needs to be written once, not twice like when a *rollback journal* is used.
+    + *Write-Ahead-Logging* uses shared memory to speed-up searches; consequently, you cannot enable *WAL*-mode when the SQLite database is located on a network file-system.
   + SQLite does not natively support incremental database backups. To achieve this functionality, you'll have to create it yourself. 
 + SQLite supports in memory databases which, optionally, may be saved and loaded from persistent storage.  (Don't forget the integrity check on load as per above!)
 + PostgreSQL, at this time, does not appear to support *memory*-only database tables.  There are various approaches to tackle this limitation but an easy one appears to be to simply use a CTE (*Common Table Expression*) with data obtained from the desired source.  For example:
