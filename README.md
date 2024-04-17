@@ -18,7 +18,8 @@
     + *Write-Ahead-Logging* also boosts the speed of SQLite because data only needs to be written once, not twice like when a *rollback journal* is used.
     + *Write-Ahead-Logging* uses shared memory to speed-up searches; consequently, you cannot enable *WAL*-mode when the SQLite database is located on a network file-system.
     + *Write-Ahead-Logging* permits simultaneous readers and writers. This is permitted because changes do not overwrite the original database file but instead go into the separate write-ahead log file.
-  + SQLite does not natively support incremental database backups. To achieve this functionality, you'll have to create it yourself. 
+  + SQLite does not natively support incremental database backups. To achieve this functionality, you'll have to create it yourself.
+  + Make sure that you properly enable *FOREIGN KEY* support in SQLite using ***PRAGMA foreign_keys=ON***; otherwise, you could inadvertently corrupt your data.
 + SQLite supports in memory databases which, optionally, may be saved and loaded from persistent storage.  (Don't forget the integrity check on load as per above!)
 + PostgreSQL, at this time, does not appear to support *memory*-only database tables.  There are various approaches to tackle this limitation but an easy one appears to be to simply use a CTE (*Common Table Expression*) with data obtained from the desired source.  For example:
   
