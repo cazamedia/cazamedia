@@ -21,6 +21,7 @@
   + SQLite does not natively support incremental database backups. To achieve this functionality, you'll have to create it yourself.
   + Make sure that you properly enable *FOREIGN KEY* support in SQLite using ***PRAGMA foreign_keys=ON***; otherwise, you could inadvertently corrupt your data.
   + **IMPORTANT**: SQLite Isolation levels do not to queries executed on the same connection!  In other words, there's no isolation in that case.
+  + When using SQLite, unless you're using *FOREIGN KEY* support, its best to use the inherent ***rowid*** column rather than having a bespoke ***id*** primary key column because you cannot use *AUTOINCREMENT* without a *rowid* which makes an *id* column rather superfluous in most cases.
 + SQLite supports in memory databases which, optionally, may be saved and loaded from persistent storage.  (Don't forget the integrity check on load as per above!)
 + PostgreSQL, at this time, does not appear to support *memory*-only database tables.  There are various approaches to tackle this limitation but an easy one appears to be to simply use a CTE (*Common Table Expression*) with data obtained from the desired source.  For example:
   
