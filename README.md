@@ -22,6 +22,7 @@
   + Make sure that you properly enable *FOREIGN KEY* support in SQLite using ***PRAGMA foreign_keys=ON***; otherwise, you could inadvertently corrupt your data.
   + **IMPORTANT**: SQLite Isolation levels do not to queries executed on the same connection!  In other words, there's no isolation in that case.
 + SQLite supports in memory databases which, optionally, may be saved and loaded from persistent storage.  (Don't forget the integrity check on load as per above!)
++ SQLite does not support as many data types as PostgreSQL nor is it as strict.  However, if, like me, you've grown accustomed to the broad spectrum of PostgreSQL data types, consider using Python.  Python's [pickle](https://docs.python.org/3/library/pickle.html) module along with the Python SQLite3 module's [converter](https://docs.python.org/3/library/sqlite3.html#sqlite3.PARSE_DECLTYPES) functionality can essentially enable support for additional types equivalent to many of those in Postgres like UUIDs, timestamptz, hstore, etc.
 + SQLiteStudio is a nice GUI for working with SQLite databases.  Try it yourself 😄!
 + PostgreSQL, at this time, does not appear to support *memory*-only database tables.  There are various approaches to tackle this limitation but an easy one appears to be to simply use a CTE (*Common Table Expression*) with data obtained from the desired source.  For example:
   
