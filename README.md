@@ -19,6 +19,7 @@
     + *Write-Ahead-Logging* also boosts the speed of SQLite because data only needs to be written once, not twice like when a *rollback journal* is used.
     + *Write-Ahead-Logging* uses shared memory to speed-up searches; consequently, you cannot enable *WAL*-mode when the SQLite database is located on a network file-system.
     + *Write-Ahead-Logging* permits simultaneous readers and writers. This is permitted because changes do not overwrite the original database file but instead go into the separate write-ahead log file.
+    + *Write-Ahead-Logging* is safe from corruption when ***PRAGMA synchronous=NORMAL*** is used, but WAL does lose durability. Consequently, a transaction committed in WAL mode with synchronous=NORMAL might roll back following a power loss or system crash.  Typically, this behavior is acceptable such situations so use of *synchronous=NORMAL* is a good choice.
   + SQLite does not natively support incremental database backups. To achieve this functionality, you'll have to create it yourself.
   + Make sure that you properly enable *FOREIGN KEY* support in SQLite using ***PRAGMA foreign_keys=ON***; otherwise, you could inadvertently corrupt your data.
   + **IMPORTANT**: SQLite Isolation levels do not to queries executed on the same connection!  In other words, there's no isolation in that case.
