@@ -1,4 +1,4 @@
-### I'd like to give a Shout Out to [Dr. Richard Hipp](https://en.wikipedia.org/wiki/D._Richard_Hipp), inventor of SQLite. Truly, an Unsung Hero.
+### I'd like to give a Shout Out to [Dr. Richard Hipp](https://en.wikipedia.org/wiki/D._Richard_Hipp), inventor of SQLite. Truly, an Unsung Hero ❤️🙏🙏🙏.
 
 + PWAs - Progressive Web Applications - are an interesting way of delivering applications to end users.  Tis rather unfortunate that the *Firefox* and *Safari* web browsers do not support them and that Apple has intentionally hamstrung them to protect their *Walled Garden*.
   + Trying a PWA sample on my own system, I was happy to note that it worked straight away.  NOTE: My daily driver is LinuxMint and *Firefox* which, as mentioned above, does ***NOT*** support PWAs.  Consequently, I had to use Chromium.  Using Chromium, PWA installation was easy and I was able to install a PWA on my home screen without issue.
