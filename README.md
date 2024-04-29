@@ -44,6 +44,7 @@
   + NOTE: *htop* is a nice utility to view this, especially if you're using ZFS like I am.  Be sure to configure htop to show the *ZFS ARC Cache* and *ZFS Compressed ARC Cache*.
   + ***IMPORTANT:*** Note that I'm **not advocating** that anyone does this!  However, some comments I've read on the internet said it wouldn't work - ie. tmpfs spilling to swap space.  But, based on my research on various Linux subsystems, I couldn't see why it would not.  It does 😄!
     + Admittedly, this just a *proof-of-concept*: it's certainly not battle-tested in any way.  Test it yourself: *YMMV*.
+    + Do not try doing this in conjunction with a swapfile on a ZFS zpool device - it's not pretty.
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
