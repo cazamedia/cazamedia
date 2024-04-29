@@ -1,6 +1,6 @@
 ### I'd like to give a Shout Out to [Dr. Richard Hipp](https://en.wikipedia.org/wiki/D._Richard_Hipp), inventor of SQLite. Truly, an Unsung Hero ❤️🙏🙏🙏.
 
-+ Python offers a large selection of ways to create desktop Graphical User Interfaces: Tkinter(CustomTkinter), Tkinter(ttkbootstrap), Kivy, PyQt, PySide, wxPython, et cetera.
++ Python offers a large [selection](https://wiki.python.org/moin/GuiProgramming) of ways to create desktop Graphical User Interfaces: Tkinter(CustomTkinter), Tkinter(ttkbootstrap), Kivy, PyQt, PySide, wxPython, et cetera.
   + Tkinter is based on Tcl/Tk and is a very mature offering.  However, some consider that GUIs made with it look dated and unappealing in comparison to modern web & mobile applications.  If a more modern look is desired, there is the [ttkbootstrap](https://ttkbootstrap.readthedocs.io/en/latest/) project, a relatively new supercharged theme extension for Tkinter, that is MIT licensed, and that can provide an updated look and feel.
     + Tkinter is licensed under the [Tcl/Tk License](https://www.tcl.tk/software/tcltk/license.html), a BSD-style license, for the Tcl/Tk portion and the Python license for the Python portion.
   + Kivy is a newer Python cross-platform GUI framework that can be utilized to make more modern GUIs in comparision to TKinter.
@@ -27,7 +27,8 @@
 + TIP: If using SQLite with Python, be aware that in Python 3.12 they deprecated a few of the default [adapters and converters](https://docs.python.org/3/library/sqlite3.html#default-adapters-and-converters-deprecated).
   + Recommended practice is to use the [Adapter & Converter Recipes](https://docs.python.org/3/library/sqlite3.html#sqlite3-adapter-converter-recipes) tailored to your specific needs.
 + TIP: SQLite is multi-purpose and can be utilized as an [application file format](https://www.sqlite.org/draft/aff_short.html), for [automatic undo/redo](https://www2.sqlite.org/undoredo.html), and for [archive files](https://www.sqlite.org/sqlar.html) to name but a few use cases.
-+ TIP: If you want to make a Python-based GUI, there's quite a [selection](https://wiki.python.org/moin/GuiProgramming) to choose from.  Choose wisely 😄!
++ [Redka](https://github.com/nalgeon/redka) is a *redis*-like clone underpinned by the SQLite database and offers some interesting potential.
+  + **IMPORTANT:** *Redka* is in a very early stage of development at present and there's no telling when it'll be ready for usage in production systems. 
 + PostgreSQL, at this time, does not appear to support *memory*-only database tables.  There are various approaches to tackle this limitation but an easy one appears to be to simply use a CTE (*Common Table Expression*) with data obtained from the desired source.  For example:
   
       WITH query_src AS (*get some data*) SELECT *desired_results* FROM query_src;
