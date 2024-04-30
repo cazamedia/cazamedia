@@ -39,12 +39,6 @@
   + *Common Table Expressions* in Postgres are incredibly powerful.  When combined with the concept that *everything's a table*, that's ***Next-Level*** technolology and potentially a ***Game Changer!***
 + ***IMPORTANT:*** If you're planning on using a swapfile on Linux and you're using ZFS, you must employ a special [procedure](https://forum.proxmox.com/threads/new-installation-system-raid1-how-to-create-swap.103157/).
   + Note that this is ***NOT RECOMMENDED***.  Especially for production systems due to an [open issue that can cause your machine do deadlock when low on memory](https://github.com/openzfs/zfs/issues/7734).
-+ Unfortunately, not everything you read on how various subsystems of Linux work together is accurate.  For example, I was able to use *zram*(8GB) as a *swap* device(*priority 100*) with *vm.swappiness=200*, mount a *tmpfs* file system of 40GB (same amount of RAM as in my test system) in */run*, and use *dd* to create a really large random file.  (NOTE: I had a small 2GB swap partition on an NVMe drive, default priority (-2)).
-  + Result: LinuxMint using kernel 5.15.0-105-generic (default install) hit the magic threshold and 8GB of the tmpfs file was swapped to the *zram0* swap device.
-  + NOTE: *htop* is a nice utility to view this, especially if you're using ZFS like I am.  Be sure to configure htop to show the *ZFS ARC Cache* and *ZFS Compressed ARC Cache*.
-  + ***IMPORTANT:*** Note that I'm **not advocating** that anyone does this!  However, some comments I've read on the internet said it wouldn't work - ie. tmpfs spilling to swap space.  But, based on my research on various Linux subsystems, I couldn't see why it would not.  It does 😄!
-    + Admittedly, this just a *proof-of-concept*: it's certainly not battle-tested in any way.  Test it yourself: *YMMV*.
-    + Do not try doing this in conjunction with a swapfile on a ZFS zpool device - it's not pretty.
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
