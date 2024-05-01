@@ -35,10 +35,10 @@
   
   + The ***get some data*** source could be provided by *memcached*, *KeyDB*, *Garnet*, a web service, a daemon internally using a SQLite *memory* table, et cetera. Use your imagination 😄!
   + Note that if you need to perform multiple queries on the source data, you should use the CTE to save the data to a Postgres *Temporary Table* and then proceed with the multiple queries.  Assuming, of course, that you cannot achieve the desired results in one single gigantic CTE 😄.
-+ Note that using the above functionality in PostgreSQL, possibly in conjunction with Postgres' SQL/MED(*Management of External Data*) features, virtually any source that provides data in row-column format can be accessed via Postgres as if it were a database table and queries run against it.
-  + *Common Table Expressions* in Postgres are incredibly powerful.  When combined with the concept that *everything's a table*, that's ***Next-Level*** technolology and potentially a ***Game Changer!***
++ Note that using the above functionality in PostgreSQL, possibly in conjunction with Postgres' **SQL/MED**(*Management of External Data*) features, virtually any source that provides data in row-column format can be accessed via Postgres as if it were a database table and queries run against it.
+  + *Common Table Expressions* in Postgres (and SQLite) are incredibly powerful.  When combined with the concept that *everything's a table*, that's ***Next-Level*** technolology and potentially a ***Game Changer!***
 + ***IMPORTANT:*** If you're planning on using a swapfile on Linux and you're using ZFS, you must employ a special [procedure](https://forum.proxmox.com/threads/new-installation-system-raid1-how-to-create-swap.103157/).
-  + Note that this is ***NOT RECOMMENDED***.  Especially for production systems due to an [open issue that can cause your machine do deadlock when low on memory](https://github.com/openzfs/zfs/issues/7734).
+  + Note that this is ***NOT RECOMMENDED***.  Especially for production systems due to an [open issue that can cause your machine to deadlock when low on memory](https://github.com/openzfs/zfs/issues/7734).
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
