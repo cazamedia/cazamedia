@@ -27,6 +27,7 @@
 + TIP: If using SQLite with Python, be aware that in Python 3.12 they deprecated a few of the default [adapters and converters](https://docs.python.org/3/library/sqlite3.html#default-adapters-and-converters-deprecated).
   + Recommended practice is to use the [Adapter & Converter Recipes](https://docs.python.org/3/library/sqlite3.html#sqlite3-adapter-converter-recipes) tailored to your specific needs.
 + TIP: SQLite is multi-purpose and can be utilized as an [application file format](https://www.sqlite.org/draft/aff_short.html), for [automatic undo/redo](https://www2.sqlite.org/undoredo.html), and for [archive files](https://www.sqlite.org/sqlar.html) to name but a few use cases.
++ SQLite may also be used for [federated databases](https://fedjax.readthedocs.io/en/latest/_modules/fedjax/core/sqlite_federated_data.html).  See [tutorial](https://fedjax.readthedocs.io/en/latest/notebooks/dataset_tutorial.html) for more information.
 + [Redka](https://github.com/nalgeon/redka) is a *redis*-like clone underpinned by the SQLite database and offers some interesting potential.
   + **IMPORTANT:** *Redka* is in a very early stage of development at present and there's no telling when it'll be ready for usage in production systems. 
 + PostgreSQL, at this time, does not appear to support *memory*-only database tables.  There are various approaches to tackle this limitation but an easy one appears to be to simply use a CTE (*Common Table Expression*) with data obtained from the desired source.  For example:
