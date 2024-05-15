@@ -43,6 +43,7 @@
 + If you're involved in the development of a new hardware project *and* you're the person who's going to be developing the firmware/software that's going to run it, it is in your best interest to ensure that you're involved in the decision-making process when selecting the hardware that will be utilized.  Furthermore, if you do not activately participate in that process, you may find that others involved and that did participate made your work ***10 times*** more difficult if not outright impossible!
 + [Automotive Ethernet](https://ethernetalliance.org/wp-content/uploads/2021/07/EA_TechBrief-SPE-SPoE_FINAL.pdf) is a very interesting technology. Conceivably, it could be quite useful in other industries.
 + [Take your health to the ***Next Level*** by learning from this Doctor's experience](https://youtu.be/Ohj1Dj2tFII?si=6k5H7wFL1vianENP).
++ Thought Of The Day: ***Pragmatists vs Perfectionists*** : who has the right of it?
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
