@@ -44,7 +44,7 @@
 + [Automotive Ethernet](https://ethernetalliance.org/wp-content/uploads/2021/07/EA_TechBrief-SPE-SPoE_FINAL.pdf) is a very interesting technology. Conceivably, it could be quite useful in other industries.
 + Opinion: if you want better health, consider eating [Ferments](https://youtu.be/iiNl0Jv6xTw?si=NqI-YW-vukQTaTLt) 😄.  Literally, they could change your life.
   + Note that Kvass is particularly interesting: it improves athletic performance to such an extent that the International Olympic Committee is considering banning it!  Additionally, it's fairly easy to make taking only a couple of days to ferment before it's ready to consume.
-+ Opinion: you gotta love recruiters that know the score, can break it down for you, and keep it real.  However, if you want to play on the Varsity Team, you've got to bring it!
++ Copilot+ PC: ***Game Changer*** or ***Not***? 🤔
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
