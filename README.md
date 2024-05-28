@@ -42,8 +42,7 @@
   + Note that this is ***NOT RECOMMENDED***.  Especially for production systems due to an [open issue that can cause your machine to deadlock when low on memory](https://github.com/openzfs/zfs/issues/7734).
 + If you're involved in the development of a new hardware project *and* you're the person who's going to be developing the firmware/software that's going to run it, it is in your best interest to ensure that you're involved in the decision-making process when selecting the hardware that will be utilized.  Furthermore, if you do not activately participate in that process, you may find that others involved and that did participate made your work ***10 times*** more difficult if not outright impossible!
 + [Automotive Ethernet](https://ethernetalliance.org/wp-content/uploads/2021/07/EA_TechBrief-SPE-SPoE_FINAL.pdf) is a very interesting technology. Conceivably, it could be quite useful in other industries.
-+ Opinion: if you want better health, consider eating [Ferments](https://youtu.be/iiNl0Jv6xTw?si=NqI-YW-vukQTaTLt) 😄.  Literally, they could change your life.
-  + Note that Kvass is particularly interesting: it improves athletic performance to such an extent that the International Olympic Committee is considering banning it!  Additionally, it's fairly easy to make taking only a couple of days to ferment before it's ready to consume.
++ Opinion: if you're looking for a position as a ***firmware developer/engineer***, be sure that you know SPI, I2C, UARTs, and I3C as it could literally make the difference and be the deciding factor.
 
 <!--
 **cazamedia/cazamedia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
