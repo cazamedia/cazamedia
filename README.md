@@ -11,7 +11,7 @@
   + Optionally, use [***PRAGMA quick_check***](https://www.sqlite.org/pragma.html#pragma_quick_check) instead.
   + SQLite can get corrupted in the typical ways any file can get corrupted.
   + Consider using a file system that utilizes *Copy-On-Write* like ZFS.
-  + Enabling *Write-Ahead-Logging* will minimize the window of when database corruption can occur as it the only failure period is during a *checkpoint* operation.
+  + Enabling *Write-Ahead-Logging* will minimize the window of when database corruption can occur as the only failure period is during a *checkpoint* operation.
     + *Write-Ahead-Logging* also boosts the speed of SQLite because data only needs to be written once, not twice like when a *rollback journal* is used.
     + *Write-Ahead-Logging* uses shared memory to speed-up searches; consequently, you cannot enable *WAL*-mode when the SQLite database is located on a network file-system.
     + *Write-Ahead-Logging* permits simultaneous readers and writers. This is permitted because changes do not overwrite the original database file but instead go into the separate write-ahead log file.
