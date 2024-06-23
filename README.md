@@ -49,7 +49,7 @@
   
       WITH query_src AS (*get some data*) SELECT *desired_results* FROM query_src;
   
-  + The ***get some data*** source could be provided by *memcached*, *KeyDB*, *Garnet*, a web service, a daemon internally using a SQLite *memory* table, et cetera. Use your imagination 😄!
+  + The ***get some data*** source could be provided by *memcached*, *KeyDB*, *Garnet*, a web service (perhaps using [*pgsql-http*](https://github.com/pramsey/pgsql-http)), a daemon internally using a SQLite *memory* table, et cetera. Use your imagination 😄!
   + Note that if you need to perform multiple queries on the source data, you should use the CTE to save the data to a Postgres *Temporary Table* and then proceed with the multiple queries.  Assuming, of course, that you cannot achieve the desired results in one single gigantic CTE 😄.
 + Note that using the above functionality in PostgreSQL, possibly in conjunction with Postgres' **SQL/MED**(*Management of External Data*) features, virtually any source that provides data in row-column format can be accessed via Postgres as if it were a database table and queries run against it.
   + *Common Table Expressions* in Postgres (and SQLite) are incredibly powerful.  When combined with the concept that *everything's a table*, that's ***Next-Level*** technolology and potentially a ***Game Changer!***
