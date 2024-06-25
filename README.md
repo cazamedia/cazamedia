@@ -27,6 +27,10 @@
 + SQLite supports [in memory](https://www.sqlite.org/inmemorydb.html) databases which, optionally, may be saved and loaded from persistent storage.  (Don't forget the integrity check on load as per above!)
   + SQLite supports CTEs(*Common Table Expressions*) as well as *user defined functions*.  Combining these can essentially enable something that behaves as if ***SQL/MED*** was in play. For example, create a user defined function that brings CSV data from a file or JSON data from a REST API or query results from a MongoDB database that can then be processed by SQLite's query parser. See below regarding PostgreSQL and CTEs for additional info.
     + NOTE: SQLite also has [virtual table](https://www.sqlite.org/vtab.html) support which can be utilized in a manner similar to the above and which may already have the desired [functionality](https://www.sqlite.org/vtablist.html) available.
+      + **IMPORTANT**: If you're using Python's SQLite module, by default it does not allow SQLite extensions to be utilized for security reasons. Consequently, a bespoke compiled version of Python with *PY_SQLITE_ENABLE_LOAD_EXTENSION* defined is required if you want to use this functionality. This is handled by invoking the Python *configure* build configuration script as follows:
+
+            configure --enable-loadable-sqlite-extensions
+        
 + **IMPORTANT**: SQLite does not support the SQL *TRUNCATE* statement.  Use 'DELETE FROM *table_name*' to truncate the specified table, but be aware of the following:
   + If the truncated table has specifically defined an *autoincrement* column as the *primary key*, then to reset the sequence you have to manually delete the entry from the *sqlite_sequence* table - eg. DELETE FROM sqlite_sequence WHERE name=*table_name*;  Otherwise, it will continue using the previous sequence.
   + If the truncated table is a *WITH ROWID* table but does not specifically indicate the primary key column as an *autoincrement* column, SQLite will automatically reset the sequence: no manual reset is required.
