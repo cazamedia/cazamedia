@@ -30,7 +30,8 @@
       + **IMPORTANT**: If you're using Python's SQLite module, by default it does not allow SQLite extensions to be utilized for security reasons. Consequently, a bespoke compiled version of Python with *PY_SQLITE_ENABLE_LOAD_EXTENSION* defined is required if you want to use this functionality. This is handled by invoking the Python *configure* build configuration script as follows:
 
             configure --enable-loadable-sqlite-extensions
-        
+
+      + Note that it might be tempting to try to modify the sqlite source code to automatically include various extensions like the *csv* extension; however, doing so is limiting, especially when 3rd party extensions offer some intriguing possibilities.  For example, the [**sqlite-http**](https://github.com/asg017/sqlite-http) extension is written in Go and essentially web-enables SQLite.
 + **IMPORTANT**: SQLite does not support the SQL *TRUNCATE* statement.  Use 'DELETE FROM *table_name*' to truncate the specified table, but be aware of the following:
   + If the truncated table has specifically defined an *autoincrement* column as the *primary key*, then to reset the sequence you have to manually delete the entry from the *sqlite_sequence* table - eg. DELETE FROM sqlite_sequence WHERE name=*table_name*;  Otherwise, it will continue using the previous sequence.
   + If the truncated table is a *WITH ROWID* table but does not specifically indicate the primary key column as an *autoincrement* column, SQLite will automatically reset the sequence: no manual reset is required.
