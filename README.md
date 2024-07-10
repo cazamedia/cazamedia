@@ -7,6 +7,7 @@
     + Kivy is MIT licensed and is 100% free to use for individuals and businesses with no strings attached.
     + Kivy supports Windows, Linux, macOS, Android, and iOS.
   + PySide (and the original PyQt) are also Python cross-platform GUI frameworks based on Qt and recommended by a number of developers if the intent is to make a large-scale and/or complex GUI.
++ SQLite is *the* most used database in history: it's ubiquitous.  Many [Distinctive Features](https://www.sqlite.org/different.html) that set it appart from other SQL databases.
 + If you're using a SQLite database, you should almost always do a [***PRAGMA integrity_check***](https://www.sqlite.org/pragma.html#pragma_integrity_check) on startup to verify that the database has not been corrupted.
   + Optionally, use [***PRAGMA quick_check***](https://www.sqlite.org/pragma.html#pragma_quick_check) instead.
   + SQLite can get corrupted in the typical ways any file can get corrupted.
@@ -42,7 +43,7 @@
     + *CREATE TABLE test( id INTEGER PRIMARY KEY, data TEXT );*  SQLite will automatically reset the sequence for the *id* column.
     + *CREATE TABLE test( data TEXT );*  SQLite will automatically reset the sequence of the hidden ***rowid*** column.
 + SQLite only allows a single *autoincrement* column per table and only if the table is a *WITH ROWID* table.  SQLite ***does not*** support *autoincrement* columns on *WITHOUT ROWID* tables. Use *trigger* functions if you need to support bespoke *autoincrement* columns.
-+ SQLite does not support as many data types as PostgreSQL nor is it as strict.  However, if, like me, you've grown accustomed to the broad spectrum of PostgreSQL data types, consider using Python.  Python's [pickle](https://docs.python.org/3/library/pickle.html) module along with the Python SQLite3 module's [converter](https://docs.python.org/3/library/sqlite3.html#sqlite3.PARSE_DECLTYPES) functionality can essentially enable support for additional types equivalent to many of those in Postgres like UUIDs, timestamptz, hstore, etc.
++ SQLite does not support as many data types as PostgreSQL nor is it as [strict](https://www.sqlite.org/different.html#typing).  However, if, like me, you've grown accustomed to the broad spectrum of PostgreSQL data types, consider using Python.  Python's [pickle](https://docs.python.org/3/library/pickle.html) module along with the Python SQLite3 module's [converter](https://docs.python.org/3/library/sqlite3.html#sqlite3.PARSE_DECLTYPES) functionality can essentially enable support for additional types equivalent to many of those in Postgres like UUIDs, timestamptz, hstore, etc.
   + NOTE: There is a [C extension for SQLite3](https://sqlite.org/src/file/ext/misc/uuid.c) that can be used to generate version 4 UUIDs.
   + TIP: The PostgreSQL *citext* extension enables a *case-insensitive text* data type.  In SQLite, use *TEXT COLLATE NOCASE* for the data type to obtain similar behavior.
   + **IMPORTANT**: SQLite does not have native *datetime* or *timestamp* data types like PostgreSQL which can lead to issues.  The SQLite [documentation](https://www.sqlite.org/lang_datefunc.html) helps but be careful of potential [caveats/limitations](https://www.sqlite.org/lang_datefunc.html#caveats_and_bugs).
