@@ -7,7 +7,7 @@
     + Kivy is MIT licensed and is 100% free to use for individuals and businesses with no strings attached.
     + Kivy supports Windows, Linux, macOS, Android, and iOS.
   + PySide (and the original PyQt) are also Python cross-platform GUI frameworks based on Qt and recommended by a number of developers if the intent is to make a large-scale and/or complex GUI.
-+ SQLite is *the* most used database in history: it's ubiquitous.  Many [Distinctive Features](https://www.sqlite.org/different.html) that set it appart from other SQL databases.
++ SQLite is *the* most used database in history: it's ubiquitous.  Many [Distinctive Features](https://www.sqlite.org/different.html) set it appart from other SQL databases.
 + If you're using a SQLite database, you should almost always do a [***PRAGMA integrity_check***](https://www.sqlite.org/pragma.html#pragma_integrity_check) on startup to verify that the database has not been corrupted.
   + Optionally, use [***PRAGMA quick_check***](https://www.sqlite.org/pragma.html#pragma_quick_check) instead.
   + SQLite can get corrupted in the typical ways any file can get corrupted.
