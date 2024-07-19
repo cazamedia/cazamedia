@@ -77,6 +77,7 @@
   + **IMPORTANT:** *Redka* is in a very early stage of development at present and there's no telling when it'll be ready for usage in production systems. 
 + TIP: An excellent resource for SQLite that leads to a great many others is the [**awesome-sqlite repository**](https://github.com/planetopendata/awesome-sqlite).  Check it out 😄!
 + TIP: [**libSQL**](https://github.com/tursodatabase/libsql) is an open source, open contribution fork of SQLite that adds a lot extra functionality.  Super cool!  Check it out 😄!
++ TIP: [**mvSQLite**](https://github.com/losfair/mvsqlite) is essentially *Distributed MVCC SQLite* that runs atop *FoundationDB* 😄.
 + PostgreSQL, at this time, does not appear to support *memory*-only database tables.  There are various approaches to tackle this limitation but an easy one appears to be to simply use a CTE (*Common Table Expression*) with data obtained from the desired source.  For example:
   
       WITH query_src AS (*get some data*) SELECT *desired_results* FROM query_src;
