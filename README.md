@@ -56,7 +56,8 @@
       + Either of these choices is less than an 64-bit signed integer maximum: ***9223372036854775807***
       + IMPORTANT: Goal is to utilize native SQLite 64-bit signed integer handling for doing comparisons for sorting & searching without having to utilize any conversions.
       + IMPORTANT: If using Python, when handling dates and times with timezones, opt to use the standard ***zoneinfo*** package added in Python 3.9 instead of the older ***pytz*** package if possible.
-      + RANT: I've been spoiled by Postgres 😕.  It would have been nice had the SQLite developers baked in the equivalent of the Postgres *timestamptz* data type rather than having to use lesser solutions. 
+      + RANT: I've been spoiled by Postgres 😕.  It would have been nice had the SQLite developers baked in the equivalent of the Postgres *timestamptz* data type rather than having to use lesser solutions.
+    + Another possibility is to utilize version 7 UUIDs per [RFC9562](https://www.rfc-editor.org/rfc/rfc9562).  There are a [plethora](https://uuid7.com/) of reasons to use them.  Plus, it's a standard 😀!
 + TIP: SQLite does not directly support the use of *user-defined functions* for indexing data **but** *user-defined functions* can be utilized by SQLite *trigger functions*.  Using trigger functions to insert & update data in a separate column is an avenue to overcome this limitation.  Alternatively, it should be possible to (ab)use SQLite's *virtual table* functionality to essentially achieve the desired behavior which may offer other advantages.
   + **IMPORTANT**: Trigger functions that call user-defined functions will cause issues if the SQLite database file is modified using an external applicaton like SQLiteStudio or the sqlite command-line utility that do not have the *UDF* defined.
 + TIP: The [**sqlite-utils**](https://github.com/simonw/sqlite-utils) project has some useful functionality to facilitate working with SQLite databases.
