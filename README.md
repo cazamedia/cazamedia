@@ -46,7 +46,7 @@
     + *CREATE TABLE test( id INTEGER PRIMARY KEY AUTOINCREMENT, data TEXT );*  Requires manual *DELETE FROM sqlite_sequence WHERE name='test';*
     + *CREATE TABLE test( id INTEGER PRIMARY KEY, data TEXT );*  SQLite will automatically reset the sequence for the *id* column.
     + *CREATE TABLE test( data TEXT );*  SQLite will automatically reset the sequence of the hidden ***rowid*** column.
-+ SQLite only allows a single *autoincrement* column per table and only if the table is a *WITH ROWID* table.  SQLite ***does not*** support *autoincrement* columns on *WITHOUT ROWID* tables. Use *trigger* functions if you need to support bespoke *autoincrement* columns.
++ SQLite only allows a single *autoincrement* column per table and only if the table is a *WITH ROWID* table.  SQLite ***does not*** support *autoincrement* columns on *WITHOUT ROWID* tables. Use *trigger* functions if you need to support bespoke *autoincrement* columns. 
 + SQLite does not support as many data types as PostgreSQL nor is it as [strict](https://www.sqlite.org/different.html#typing).  However, if, like me, you've grown accustomed to the broad spectrum of PostgreSQL data types, consider using Python.  Python's [pickle](https://docs.python.org/3/library/pickle.html) module along with the Python SQLite3 module's [converter](https://docs.python.org/3/library/sqlite3.html#sqlite3.PARSE_DECLTYPES) functionality can essentially enable support for additional types equivalent to many of those in Postgres like UUIDs, timestamptz, hstore, etc.
   + NOTE: There is a [C extension for SQLite3](https://sqlite.org/src/file/ext/misc/uuid.c) that can be used to generate version 4 UUIDs.
   + TIP: The PostgreSQL *citext* extension enables a *case-insensitive text* data type.  In SQLite, use *TEXT COLLATE NOCASE* for the data type to obtain similar behavior.
@@ -62,6 +62,13 @@
     + Another possibility is to utilize *time-based* version 7 UUIDs per [RFC9562](https://www.rfc-editor.org/rfc/rfc9562).  There are a [plethora](https://uuid7.com/) of reasons to use them.  Plus, it's a standard 😀!
       + Unlike Postgres where a TIMEUUID type could be created to handle the necessary operations, helper functions will be required in Python+SQLite in order to convert UUIDv7's to timestamps which are then stored in an auxiliary column using trigger functions.  The auxiliary timestamp column can be indexed for fast time-based range queries. This requires more space but has the benefit that the auxiliary timestamp column is human-readable.
       + NOTE: Combining the aforementioned approaches - ie. a 64-bit integer fixed point *timestamp* with a bespoke TIMEUUID column containing the 64-bit timestamp along with a 64-bit random component may be the optimum solution when using SQLite/libSQL/rqlite/mvSQLite.
++ TIP: A *WITH ROWID* table in SQLite will randomly generate a new ***rowid***, instead of a monotonically increasing one, if there is already an existing record with the maximum rowid of *9223372036854775807*.
+
+      CREATE TABLE random_rowid( id INTEGER PRIMARY KEY, info TEXT );
+      INSERT INTO random_rowid(id) VALUES('9223372036854775807');
+      INSERT INTO random_rowid(info) VALUES('Testing...'),('Testing...'),('Testing...');
+      SELECT * FROM random_rowid;
+
 + TIP: SQLite does not directly support the use of *user-defined functions* for indexing data **but** *user-defined functions* can be utilized by SQLite *trigger functions*.  Using trigger functions to insert & update data in a separate timestamp column is an avenue to overcome this limitation.  Alternatively, it should be possible to (ab)use SQLite's *virtual table* functionality to essentially achieve the desired behavior which may offer other advantages.
   + **IMPORTANT**: Trigger functions that call user-defined functions will cause issues if the SQLite database file is modified using an external applicaton like SQLiteStudio or the sqlite command-line utility that do not have the *UDF* defined.
 + TIP: The [**sqlite-utils**](https://github.com/simonw/sqlite-utils) project has some useful functionality to facilitate working with SQLite databases.
