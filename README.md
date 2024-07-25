@@ -19,6 +19,7 @@
     + *Write-Ahead-Logging* is safe from corruption when ***PRAGMA synchronous=NORMAL*** is used, but WAL does lose durability. Consequently, a transaction committed in WAL mode with synchronous=NORMAL might roll back following a power loss or system crash.  Typically, this behavior is acceptable in such situations so use of *synchronous=NORMAL* is a good choice.
     + Adjust [***PRAGMA wal_autocheckpoint***](https://www.sqlite.org/pragma.html#pragma_wal_autocheckpoint) setting as needed to optimize performance yet maintain reliability.
     + Use [***PRAGMA wal_checkpoint***](https://www.sqlite.org/pragma.html#pragma_wal_checkpoint) setting as needed to trigger a checkpoint.  There are a number of options available depending on your specific requirements.
+      + While not yet released, [***wal2***](https://www.sqlite.org/cgi/src/doc/wal2/doc/wal2.md) journal_mode is coming to SQLite which should resolve some issues betwixt wal files and checkpoints under certain conditions.
   + SQLite does not natively support incremental database backups - ie. any changes to the database since the last backup. To achieve this functionality, you'll have to create it yourself.
   + Make sure that you properly enable *FOREIGN KEY* support in SQLite using ***PRAGMA foreign_keys=ON***; otherwise, you could inadvertently corrupt your data.
   + **IMPORTANT**: SQLite Isolation levels do not apply to queries executed on the same connection!  In other words, there's no isolation in that case.
