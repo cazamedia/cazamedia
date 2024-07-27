@@ -37,6 +37,7 @@
 
       + Note that it might be tempting to try to modify the sqlite source code to automatically include various extensions like the *csv* extension; however, doing so is limiting, especially when 3rd party extensions offer some intriguing possibilities.  For example, the [**sqlite-http**](https://github.com/asg017/sqlite-http) extension is written in Go and essentially web-enables SQLite.
       + *Alternative*: Use the Python [**sqlite-vtfunc**](https://github.com/coleifer/sqlite-vtfunc) package to achieve the desired SQLite *virtual table* functionality by using Python-based table functions.
+        + TIP: [**sqlite-vtfunc**](https://github.com/coleifer/sqlite-vtfunc) package has example ***GenerateSeries*** which can be used to generate *series* data without having to load the [*generate_series*](https://www.sqlite.org/series.html) table-valued function.
         + TIP: See [article](https://charlesleifer.com/blog/sqlite-table-valued-functions-with-python/) for more details including interesting examples.
 + Using an ORM like [**peewee**](https://github.com/coleifer/peewee) makes working with both SQLite and PostgreSQL databases easier. Additionally, a lot of enhanced functionality is provided to extend the capabilities of each database. Also consider using [**SQLAlchemy**](https://www.sqlalchemy.org/) which is the defacto Python-based ORM and highly prized by many developers.
 + **IMPORTANT**: SQLite does not support the SQL *TRUNCATE* statement.  Use 'DELETE FROM *table_name*' to truncate the specified table, but be aware of the following:
