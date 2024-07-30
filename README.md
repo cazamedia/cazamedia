@@ -22,6 +22,7 @@
     + Use [***PRAGMA wal_checkpoint***](https://www.sqlite.org/pragma.html#pragma_wal_checkpoint) setting as needed to trigger a checkpoint.  There are a number of options available depending on your specific requirements.
       + While not yet released, [***wal2***](https://www.sqlite.org/cgi/src/doc/wal2/doc/wal2.md) journal_mode is coming to SQLite which should resolve some issues betwixt wal files and checkpoints under certain conditions.
   + SQLite does not natively support incremental database backups - ie. any changes to the database since the last backup. To achieve this functionality, you'll have to create it yourself.
+    + That said, he [***litestream***](https://github.com/benbjohnson/litestream) project may be of interest 😉.
   + Make sure that you properly enable *FOREIGN KEY* support in SQLite using ***PRAGMA foreign_keys=ON***; otherwise, you could inadvertently corrupt your data.
   + **IMPORTANT**: SQLite Isolation levels do not apply to queries executed on the same connection!  In other words, there's no isolation in that case.
 + **IMPORTANT**: SQLite, for legacy reasons, supports database tables with an inherent *rowid* as well as tables created ***WITHOUT ROWID***.  In certain cases, there are benefits to using the latter but there are [caveats](https://www.sqlite.org/withoutrowid.html#when_to_use_without_rowid).  Choose carefully 🤔.
