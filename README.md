@@ -59,6 +59,10 @@
           info JSON
       ) WITHOUT ROWID;
   
++ **IMPORTANT**: The VACUUM command may change the ROWIDs of entries in any tables that do not have an explicit INTEGER PRIMARY KEY.
+  + Typically, the recommended best practice is to explicitly include an *id INTEGER PRIMARY KEY* in the table definition.  Here, *id* is an alias for *rowid*.
+  + If you need to ensure the *rowid* is always incremented and never reused, add the *AUTOINCREMENT* - ie. *id INTEGER PRIMARY KEY AUTOINCREMENT*.  See above about *TRUNCATE* handling.
+  + Avoid *WITHOUT ROWID* tables unless necessary.  The common behavior is usually more efficient except in certain special cases.
 + SQLite does not support as many data types as PostgreSQL nor is it as [strict](https://www.sqlite.org/different.html#typing).  However, if, like me, you've grown accustomed to the broad spectrum of PostgreSQL data types, consider using Python.  Python's [pickle](https://docs.python.org/3/library/pickle.html) module along with the Python SQLite3 module's [converter](https://docs.python.org/3/library/sqlite3.html#sqlite3.PARSE_DECLTYPES) functionality can essentially enable support for additional types equivalent to many of those in Postgres like UUIDs, timestamptz, hstore, etc.
   + NOTE: There is a [C extension for SQLite3](https://sqlite.org/src/file/ext/misc/uuid.c) that can be used to generate version 4 UUIDs.
   + TIP: The PostgreSQL *citext* extension enables a *case-insensitive text* data type.  In SQLite, use *TEXT COLLATE NOCASE* for the data type to obtain similar behavior.
