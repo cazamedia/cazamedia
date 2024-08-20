@@ -63,8 +63,7 @@
   
 + **IMPORTANT**: The VACUUM command may change the ROWIDs of entries in any tables that do not have an explicit INTEGER PRIMARY KEY.
   + Typically, the recommended best practice is to explicitly include an *id INTEGER PRIMARY KEY* in the table definition.  Here, *id* is an alias for *rowid*.
-  + If you need to ensure the *rowid* is always incremented and never reused, add the *AUTOINCREMENT* - ie. *id INTEGER PRIMARY KEY AUTOINCREMENT*.  See above about *TRUNCATE* handling.
-  + Avoid *WITHOUT ROWID* tables unless necessary.  The common behavior is usually - *but not always* - more efficient except in certain special cases.  Only way to be certain is to perform testing.
+  + If you need to ensure the *rowid* is always incremented and never reused, add the *AUTOINCREMENT* qualifier - ie. *id INTEGER PRIMARY KEY AUTOINCREMENT*.  See above about *TRUNCATE* handling.
 + TIP: Consider [pre-growing](https://www.sqlite.org/pragma.html#pragma_max_page_count) your SQLite database to prevent file-system fragmentation from hindering performance.
 + TIP: For the best possible query performance in SQLite, you need to [***optimize***](https://www.sqlite.org/pragma.html#pragma_optimize) your database.
 + SQLite does not support as many data types as PostgreSQL nor is it as [strict](https://www.sqlite.org/different.html#typing).  However, if, like me, you've grown accustomed to the broad spectrum of PostgreSQL data types, consider using Python.  Python's [pickle](https://docs.python.org/3/library/pickle.html) module along with the Python SQLite3 module's [converter](https://docs.python.org/3/library/sqlite3.html#sqlite3.PARSE_DECLTYPES) functionality can essentially enable support for additional types equivalent to many of those in Postgres like UUIDs, timestamptz, hstore, etc.
