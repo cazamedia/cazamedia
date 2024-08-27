@@ -78,7 +78,6 @@
       + Either of these choices is less than an 64-bit signed integer maximum: ***9223372036854775807***
       + IMPORTANT: Goal is to utilize native SQLite 64-bit signed integer handling for doing comparisons for sorting & searching without having to utilize any conversions.
       + IMPORTANT: If using Python, when handling dates and times with timezones, opt to use the standard ***zoneinfo*** package added in Python 3.9 instead of the older ***pytz*** package if possible.
-      + RANT: I've been spoiled by Postgres 😕.  It would have been nice had the SQLite developers baked in the equivalent of the Postgres *timestamptz* data type rather than having to use lesser solutions.
     + Another possibility is to utilize *time-based* version 6 or version 7 UUIDs per [RFC9562](https://www.rfc-editor.org/rfc/rfc9562).  There are a [plethora](https://uuid7.com/) of reasons to use them.  Plus, it's a standard 😀!
       + TIP: Python package [***uuid6***](https://pypi.org/project/uuid6/) supports version 6, 7, and 8 UUIDs as defined in RFC9562.
 + TIP: A *WITH ROWID* table in SQLite will randomly generate a new ***rowid***, instead of a monotonically increasing one, if there is already an existing record with the maximum rowid of *9223372036854775807*.
@@ -122,7 +121,8 @@
   + PostgreSQL has a native *uuid* data type.  Unfortunately, at this time, it does not support version 6, 7 or 8 UUIDs (see [RFC9562](https://www.rfc-editor.org/rfc/rfc9562)).  
     + Very interesting [**gist**](https://gist.github.com/kjmph/5bd772b2c2df145aa645b837da7eca74) on using UUIDv7's in PostgreSQL (including *licensed* code 😄).
     + Very interesting article: [***Sequential UUID Generators***](https://www.2ndquadrant.com/en/blog/sequential-uuid-generators/) on using UUIDs in wal-backed databases.  Especially important is avoiding write amplication.  While PostgreSQL is discussed, it applies to any wal-backed database including SQLite in either *wal* or *wal2* journal mode.
-      + TIP: Version 6 and version 7 UUIDs are sufficiently ordered to avoid a lot of the issues identified in the above article.   
+      + TIP: Version 6 and version 7 UUIDs are sufficiently ordered to avoid a lot of the issues identified in the above article.
+      + TIP: Theoretically, using a combination of *Sequential UUIDs* in combination with *Consistent Hashing* would allow one to make a RFC9562-compliant version 8 UUID that suitable for use in a horizontally scalable database cluster.   
 + ***IMPORTANT:*** If you're planning on using a swapfile on Linux and you're using ZFS, you must employ a special [procedure](https://forum.proxmox.com/threads/new-installation-system-raid1-how-to-create-swap.103157/).
   + Note that this is ***NOT RECOMMENDED***.  Especially for production systems due to an [open issue that can cause your machine to deadlock when low on memory](https://github.com/openzfs/zfs/issues/7734).
 + If you're involved in the development of a new hardware project *and* you're the person who's going to be developing the firmware/software that's going to run it, it is in your best interest to ensure that you're involved in the decision-making process when selecting the hardware that will be utilized.  Furthermore, if you do not activately participate in that process, you may find that others involved and that did participate made your work ***10 times*** more difficult if not outright impossible!
