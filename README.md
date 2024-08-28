@@ -58,7 +58,7 @@
       CREATE TABLE my_table (
           uuid UUID NOT NULL PRIMARY KEY DEFAULT ( generate_uuid_v6() ),
           custom_id INTEGER NOT NULL DEFAULT ( autoinc('my_table','custom_id') ),
-          info JSON
+          info JSONB
       ) WITHOUT ROWID;
   
 + **IMPORTANT**: The VACUUM command may change the ROWIDs of entries in any tables that do not have an explicit INTEGER PRIMARY KEY.
@@ -70,6 +70,8 @@
   + NOTE: There is a [C extension for SQLite3](https://sqlite.org/src/file/ext/misc/uuid.c) that can be used to generate version 4 UUIDs.
     + **IMPORTANT**: Use of version 4 UUIDs, due to their random nature, results in *write amplification* and generates a lot of WAL records if *wal* or *wal2* journal mode is utilized.  Version 6, version 7, or version 8 UUIDs, depending on requirements, are probably a better option. 
   + TIP: The PostgreSQL *citext* extension enables a *case-insensitive text* data type.  In SQLite, use *TEXT COLLATE NOCASE* for the data type to obtain similar behavior.
+  + TIP: SQLite supports its own internal [JSONB](https://www.sqlite.org/json1.html#jsonb) format which can it can store directly in the database.  Applications that utilize this functionality can bypass the overhead of parsing and rendering JSON when reading and updating JSON values.
+    + Note that this is different than PostgreSQL's JSONB format so does not make the same performance claims.  
   + **IMPORTANT**: SQLite does not have native *datetime* or *timestamp* data types like PostgreSQL which can lead to issues.  The SQLite [documentation](https://www.sqlite.org/lang_datefunc.html) helps but be careful of potential [caveats/limitations](https://www.sqlite.org/lang_datefunc.html#caveats_and_bugs).
     + If the native *datetime* / *timestamp* handling is not to your liking, one possibility is to use fixed-point math in conjunction with the Unix Epoch.
       + Using a maximum time of ***9223372035*** seconds since the Unix Epoch equates to the date: ***Fri Apr 11 23:47:15 2262 UTC***
