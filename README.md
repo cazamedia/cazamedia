@@ -1,12 +1,13 @@
 ### I'd like to give a Shout Out to [Dr. Richard Hipp](https://en.wikipedia.org/wiki/D._Richard_Hipp), inventor of SQLite. Truly, an Unsung Hero ❤️🙏🙏🙏.
 
-+ Python offers a large [selection](https://wiki.python.org/moin/GuiProgramming) of ways to create desktop Graphical User Interfaces: Tkinter(CustomTkinter), Tkinter(ttkbootstrap), Kivy, PyQt, PySide, wxPython, et cetera.
++ Python offers a large [selection](https://wiki.python.org/moin/GuiProgramming) of ways to create desktop Graphical User Interfaces: Tkinter(CustomTkinter), Tkinter(ttkbootstrap), Kivy, PyQt, PySide, wxPython, Gooey, Eel, et cetera.
   + Tkinter is based on Tcl/Tk and is a very mature offering.  However, some consider that GUIs made with it look dated and unappealing in comparison to modern web & mobile applications.  If a more modern look is desired, there is the [ttkbootstrap](https://ttkbootstrap.readthedocs.io/en/latest/) project, a relatively new supercharged theme extension for Tkinter, that is MIT licensed, and that can provide an updated look and feel.
     + Tkinter is licensed under the [Tcl/Tk License](https://www.tcl.tk/software/tcltk/license.html), a BSD-style license, for the Tcl/Tk portion and the Python license for the Python portion.
   + Kivy is a newer Python cross-platform GUI framework that can be utilized to make more modern GUIs in comparision to TKinter.
     + Kivy is MIT licensed and is 100% free to use for individuals and businesses with no strings attached.
     + Kivy supports Windows, Linux, macOS, Android, and iOS.
-  + PySide (and the original PyQt) are also Python cross-platform GUI frameworks based on Qt and recommended by a number of developers if the intent is to make a large-scale and/or complex GUI.
+  + PySide and the original PyQt are also Python cross-platform GUI frameworks based on Qt and recommended by a number of developers if the intent is to make a large-scale and/or complex GUIs.
+  + Another option would be to create a website in Python using Flask or Django or some other Python web framework then turn it into a desktop application using Electron.  Discord uses this method. 
 + SQLite is *the* most used database in history: it's ubiquitous.  Many [Distinctive Features](https://www.sqlite.org/different.html) set it appart from other SQL databases.
   + SQLite is so standardized that is an [official archival format of the US Library of Congress](https://www.sqlite.org/locrsf.html).
 + If you're using a SQLite database, you should almost always do a [***PRAGMA integrity_check***](https://www.sqlite.org/pragma.html#pragma_integrity_check) on startup to verify that the database has not been corrupted.
