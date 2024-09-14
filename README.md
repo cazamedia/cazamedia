@@ -7,6 +7,7 @@
     + Kivy is MIT licensed and is 100% free to use for individuals and businesses with no strings attached.
     + Kivy supports Windows, Linux, macOS, Android, and iOS.
   + PySide and the original PyQt are also Python cross-platform GUI frameworks based on Qt and recommended by a number of developers if the intent is to make a large-scale and/or complex GUIs.
+    + NOTE: PySide is developed by **The Qt Company** itself and has a more permissive software license.  As it has support of Qt developers and is an official language binding, it's a solid choice. 
   + Another option would be to create a website in Python using Flask or Django or some other Python web framework then turn it into a desktop application using Electron.  Discord uses this method. 
 + SQLite is *the* most used database in history: it's ubiquitous.  Many [Distinctive Features](https://www.sqlite.org/different.html) set it appart from other SQL databases.
   + SQLite is so standardized that is an [official archival format of the US Library of Congress](https://www.sqlite.org/locrsf.html).
